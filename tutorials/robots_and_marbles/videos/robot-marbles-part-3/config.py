@@ -43,14 +43,14 @@ def get_current_timestep(cur_substep, s):
 
 def robot_arm_1(_g, step, sL, s):
     _robotId = 1
-    if get_current_timestep(step, s)%robots_periods[_robotId-1]==0: # on timesteps that are multiple of 2, Robot 1 acts
+    if get_current_timestep(step, s) % robots_periods[_robotId-1] == 0: # on timesteps that are multiple of 2, Robot 1 acts
         return robot_arm(_g, step, sL, s)
     else:
         return({'add_to_A': 0, 'add_to_B': 0}) # for all other timesteps, Robot 1 doesn't interfere with the system
 
 def robot_arm_2(_g, step, sL, s):
     _robotId = 2
-    if get_current_timestep(step, s)%robots_periods[_robotId-1]==0: # on timesteps that are multiple of 3, Robot 2 acts
+    if get_current_timestep(step, s) % robots_periods[_robotId-1] == 0: # on timesteps that are multiple of 3, Robot 2 acts
         return robot_arm(_g, step, sL, s)
     else:
         return({'add_to_A': 0, 'add_to_B': 0}) # for all other timesteps, Robot 2 doesn't interfere with the system

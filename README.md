@@ -1,6 +1,20 @@
 # Tutorials and demos
 This repo contains tutorials and demos for learning how to use cadCAD. 
 
+## Setup
+
+Download `uniswap_events.pickle` from https://www.kaggle.com/markusbkoch/uniswap-ethdai-exchange/output?select=uniswap_events.pickle to `./demos/Multiscale/uniswap/model/parts/`
+
+
+```
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -U pip
+pip install -r requirements.txt
+jupyter notebook
+```
+
+
 ## cadCAD System in "Plain English" 
 In the cadCAD simulation [methodology](https://community.cadcad.org/t/differential-specification-syntax-key/31), we operate on four layers: **Policies, Mechanisms, States**, and **Metrics**. Information flows do not have explicit feedback loop unless noted. **Policies** determine the inputs into the system dynamics, and can come from user input, observations from the exogenous environment, or algorithms. **Mechanisms** are functions that take the policy decisions and update the States to reflect the policy level changes. **States** are variables that represent the system quantities at the given point in time, and **Metrics** are computed from state variables to assess the health of the system. Metrics can often be thought of as KPIs, or Key Performance Indicators. 
 

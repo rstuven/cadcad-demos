@@ -1,8 +1,8 @@
-class Adoption_Pool(): 
+class AdoptionPool(): 
     """
     Adoption class for defining state of network adoption
-    This is class is on the subpopulation level, where each state maitains a count of members
-    and a mean of reputation in the addoption funnel
+    This class is on the subpopulation level, where each state maitains a count of members
+    and a mean of reputation in the adoption funnel
     and threshold transition value
     """  
     def __init__(self, pool):
